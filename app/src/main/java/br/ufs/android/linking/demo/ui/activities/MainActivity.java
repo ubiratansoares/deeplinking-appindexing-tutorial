@@ -1,4 +1,4 @@
-package br.ufs.android.linking.demo.ui;
+package br.ufs.android.linking.demo.ui.activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
