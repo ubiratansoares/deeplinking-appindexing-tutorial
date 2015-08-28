@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/material_blue_grey_800"
+    android:orientation="vertical"
+    android:padding="16dp"
+    >
+
+    <TextView
+        android:id="@+id/txt_headline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:text="About this player"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/abc_text_size_small_material"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/txt_player_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_headline"
+        android:ellipsize="end"
+        android:lines="1"
+        android:padding="4dp"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/abc_text_size_medium_material"
+        tools:text="Ubiratan Soares"
+        />
+
+    <TextView
+        android:id="@+id/txt_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txt_player_name"
+        android:layout_toRightOf="@+id/txt_player_name"
+        android:ellipsize="end"
+        android:lines="1"
+        android:padding="4dp"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/abc_text_size_small_material"
+        tools:text="São Paulo, Brasil"
+        android:layout_toLeftOf="@+id/img_dribble_player"
+        android:layout_toStartOf="@+id/img_dribble_player"/>
+
+    <ImageView
+        android:id="@+id/img_dribble_player"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="8dp"
+        android:src="@drawable/ic_user_placeholder"
+        tools:ignore="ContentDescription"/>
+
+
+</RelativeLayout>

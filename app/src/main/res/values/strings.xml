@@ -1,6 +1,10 @@
 <resources>
-    <string name="app_name">deeplinking-appindexing-demo</string>
+    <string name="app_name">DesafioConcrete</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="label_error_network">Problemas de conectividade. Tente novamente mais tarde</string>
+    <string name="label_error_request">Problemas na comunicação com o servidor, tente novamente</string>
+    <string name="error_message_pagination">" Problemas para obter novos shots"</string>
+    <string name="blankstate_no_comments_for_shot">Não há comentários para esse shot</string>
 </resources>
