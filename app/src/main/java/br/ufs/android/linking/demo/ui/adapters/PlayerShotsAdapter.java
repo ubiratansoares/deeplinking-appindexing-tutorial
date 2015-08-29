@@ -50,11 +50,13 @@ public class PlayerShotsAdapter extends HeaderAdapter {
     @Override protected void onBindHeader(RecyclerView.ViewHolder holder) {
 
         final HeaderHolder headerHolder = (HeaderHolder) holder;
+
         headerHolder.userNameLabel.setText(player.getName());
         headerHolder.userLocationLabel.setText(player.getLocation());
-        headerHolder.likesCountLabel.setText(String.valueOf(player.getLikes()));
-        headerHolder.followerCountLabel.setText(String.valueOf(player.getFollowers()));
-        headerHolder.shotsCountLabel.setText(String.valueOf(500));
+        headerHolder.likesCountLabel.setText(String.valueOf(player.getLikesCount()));
+        headerHolder.followerCountLabel.setText(String.valueOf(player.getFollowersCount()));
+        headerHolder.shotsCountLabel.setText(String.valueOf(player.getShotsCount()));
+
         String avatarURL = player.getAvatarURL();
 
         Picasso.with(context).load(avatarURL)

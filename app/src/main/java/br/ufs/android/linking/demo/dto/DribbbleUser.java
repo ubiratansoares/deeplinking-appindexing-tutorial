@@ -9,8 +9,9 @@ import java.io.Serializable;
  */
 public class DribbbleUser implements Serializable {
 
-    @SerializedName("followers_count") int followers;
-    @SerializedName("likes_received_count") int likes;
+    @SerializedName("followers_count") int followersCount;
+    @SerializedName("likes_received_count") int likesCount;
+    @SerializedName("shots_count") int shotsCount;
     @SerializedName("avatar_url") String avatarURL;
     int id;
     String name;
@@ -29,12 +30,16 @@ public class DribbbleUser implements Serializable {
         return location;
     }
 
-    public int getFollowers() {
-        return followers;
+    public int getFollowersCount() {
+        return followersCount;
     }
 
-    public int getLikes() {
-        return likes;
+    public int getLikesCount() {
+        return likesCount;
+    }
+
+    public int getShotsCount() {
+        return shotsCount;
     }
 
     public String getAvatarURL() {
