@@ -1,5 +1,6 @@
 package br.ufs.android.linking.demo.rest;
 
+import br.ufs.android.linking.demo.dto.DribbbleShot;
 import br.ufs.android.linking.demo.rest.payloads.CommentsForShotPayload;
 import br.ufs.android.linking.demo.rest.payloads.ShotsPayload;
 import retrofit.Callback;
@@ -23,4 +24,13 @@ public interface DribbbleAPI {
             Callback<CommentsForShotPayload> callback
     );
 
+    @GET("/shots/{shotId}") void shotDetails(
+            @Path("shotId") String shotId,
+            Callback<DribbbleShot> callback
+    );
+
+    @GET("/players/{playerId}/shots?page=1&per_page=15") void shotsForPlayer(
+            @Path("playerId") String shotId,
+            Callback<ShotsPayload> callback
+    );
 }

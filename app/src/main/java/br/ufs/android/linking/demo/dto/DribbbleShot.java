@@ -12,6 +12,7 @@ public class DribbbleShot implements Serializable {
     @SerializedName("image_url") String shotURL;
     @SerializedName("views_count") int views;
     @SerializedName("player") DribbbleUser user;
+    @SerializedName("url")String webURL;
     String title;
     String description;
     int id;
@@ -30,6 +31,10 @@ public class DribbbleShot implements Serializable {
 
     public int getViews() {
         return views;
+    }
+
+    public String getWebURL() {
+        return webURL;
     }
 
     public DribbbleUser getUser() {

@@ -7,4 +7,6 @@
     <string name="label_error_request">Problemas na comunicação com o servidor, tente novamente</string>
     <string name="error_message_pagination">" Problemas para obter novos shots"</string>
     <string name="blankstate_no_comments_for_shot">Não há comentários para esse shot</string>
+
+    <string name="filter_shot_details">Ver Shot</string>
 </resources>

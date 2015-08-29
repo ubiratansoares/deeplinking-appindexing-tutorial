@@ -12,7 +12,7 @@ import retrofit.client.Response;
  * Created by ubiratansoares on 8/28/15.
  */
 
-public class PopularShotsCallback extends ErrorHandledCallback<ShotsPayload> {
+public class ShotsCallback extends ErrorHandledCallback<ShotsPayload> {
 
     @Override public void success(ShotsPayload payload, Response response) {
         final List<DribbbleShot> shots = payload.getShots();

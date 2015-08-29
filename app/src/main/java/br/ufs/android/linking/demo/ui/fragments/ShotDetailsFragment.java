@@ -1,5 +1,6 @@
 package br.ufs.android.linking.demo.ui.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -20,9 +21,11 @@ import br.ufs.android.linking.demo.dto.ErrorMessageType;
 import br.ufs.android.linking.demo.dto.ShotComment;
 import br.ufs.android.linking.demo.presentation.presenters.ShotDetailsPresenter;
 import br.ufs.android.linking.demo.presentation.views.ShotDetailsView;
+import br.ufs.android.linking.demo.ui.activities.PlayerDetailsActivity;
 import br.ufs.android.linking.demo.ui.adapters.ShotCommentsAdapter;
 import br.ufs.android.linking.demo.ui.util.CircularTransformation;
 import butterknife.Bind;
+import butterknife.OnClick;
 
 /**
  * Created by ubiratansoares on 8/28/15.
@@ -52,6 +55,12 @@ public class ShotDetailsFragment extends BaseFragment implements ShotDetailsView
 
     public ShotDetailsFragment() {
 
+    }
+
+    @OnClick(R.id.img_dribble_player) void goToPlayerDetails() {
+        final DribbbleUser player = shot.getUser();
+        final Intent toPlayerDetails = PlayerDetailsActivity.launch(getActivity(), player);
+        startActivity(toPlayerDetails);
     }
 
     @Override protected int layoutResource() {

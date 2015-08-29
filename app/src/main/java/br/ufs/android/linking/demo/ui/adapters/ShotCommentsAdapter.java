@@ -143,6 +143,7 @@ public class ShotCommentsAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
         }
     }
 
+
     static class HeaderHolder extends RecyclerView.ViewHolder {
 
         @Bind(R.id.img_shot) ImageView shotImage;

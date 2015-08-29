@@ -3,8 +3,9 @@ package br.ufs.android.linking.demo.interactor;
 import br.ufs.android.linking.demo.dto.DribbbleShot;
 import br.ufs.android.linking.demo.rest.DribbbleAPI;
 import br.ufs.android.linking.demo.rest.RestAdapterProvider;
-import br.ufs.android.linking.demo.rest.callbacks.PopularShotsCallback;
+import br.ufs.android.linking.demo.rest.callbacks.ShotsCallback;
 import br.ufs.android.linking.demo.rest.callbacks.ShotCommentsCallback;
+import br.ufs.android.linking.demo.rest.callbacks.ShotDetailsCallback;
 import retrofit.RestAdapter;
 
 /**
@@ -21,10 +22,19 @@ public class RESTInteractor {
     }
 
     public void fetchPopularShots(int page) {
-        api.popularShots(page, new PopularShotsCallback());
+        api.popularShots(page, new ShotsCallback());
     }
 
     public void fetchCommentsForShot(DribbbleShot shot) {
         api.commentsForShot(shot.getId(), new ShotCommentsCallback());
     }
+
+    public void fetchShotDetails(String shotId) {
+        api.shotDetails(shotId, new ShotDetailsCallback());
+    }
+
+    public void fetchShotsForPlayer(String playerId) {
+        api.shotsForPlayer(playerId, new ShotsCallback());
+    }
+
 }
