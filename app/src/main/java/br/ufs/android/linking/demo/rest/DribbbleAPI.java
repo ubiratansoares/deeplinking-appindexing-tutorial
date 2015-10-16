@@ -1,8 +1,9 @@
 package br.ufs.android.linking.demo.rest;
 
+import java.util.List;
+
 import br.ufs.android.linking.demo.dto.DribbbleShot;
-import br.ufs.android.linking.demo.rest.payloads.CommentsForShotPayload;
-import br.ufs.android.linking.demo.rest.payloads.ShotsPayload;
+import br.ufs.android.linking.demo.dto.ShotComment;
 import retrofit.Callback;
 import retrofit.http.GET;
 import retrofit.http.Path;
@@ -14,14 +15,14 @@ import retrofit.http.Query;
 
 public interface DribbbleAPI {
 
-    @GET("/shots/popular") void popularShots(
+    @GET("/shots") void popularShots(
             @Query("page") int page,
-            Callback<ShotsPayload> callback
-    );
+            Callback<List<DribbbleShot>> callback
+            );
 
     @GET("/shots/{shotId}/comments/") void commentsForShot(
             @Path("shotId") int shotId,
-            Callback<CommentsForShotPayload> callback
+            Callback<List<ShotComment>> callback
     );
 
     @GET("/shots/{shotId}") void shotDetails(
@@ -29,8 +30,8 @@ public interface DribbbleAPI {
             Callback<DribbbleShot> callback
     );
 
-    @GET("/players/{playerId}/shots?page=1&per_page=15") void shotsForPlayer(
-            @Path("playerId") String shotId,
-            Callback<ShotsPayload> callback
+    @GET("/users/{userId}/shots") void shotsForPlayer(
+            @Path("userId") String shotId,
+            Callback<List<DribbbleShot>> callback
     );
 }

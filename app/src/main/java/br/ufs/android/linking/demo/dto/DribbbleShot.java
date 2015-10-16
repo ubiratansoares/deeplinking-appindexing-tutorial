@@ -9,10 +9,10 @@ import java.io.Serializable;
  */
 public class DribbbleShot implements Serializable {
 
-    @SerializedName("image_url") String shotURL;
+    @SerializedName("images") Images images;
     @SerializedName("views_count") int views;
-    @SerializedName("player") DribbbleUser user;
-    @SerializedName("url")String webURL;
+    @SerializedName("user") DribbbleUser user;
+    @SerializedName("url") String webURL;
     String title;
     String description;
     int id;
@@ -21,8 +21,8 @@ public class DribbbleShot implements Serializable {
         return id;
     }
 
-    public String getShotURL() {
-        return shotURL;
+    public String getImageURL() {
+        return images.hidpi;
     }
 
     public String getTitle() {
@@ -43,5 +43,9 @@ public class DribbbleShot implements Serializable {
 
     public String getDescription() {
         return description;
+    }
+
+    static class Images implements Serializable {
+        String hidpi;
     }
 }

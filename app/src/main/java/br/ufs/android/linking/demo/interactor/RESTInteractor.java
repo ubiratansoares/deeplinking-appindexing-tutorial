@@ -1,11 +1,14 @@
 package br.ufs.android.linking.demo.interactor;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import br.ufs.android.linking.demo.dto.DribbbleShot;
 import br.ufs.android.linking.demo.rest.DribbbleAPI;
 import br.ufs.android.linking.demo.rest.RestAdapterProvider;
-import br.ufs.android.linking.demo.rest.callbacks.ShotsCallback;
 import br.ufs.android.linking.demo.rest.callbacks.ShotCommentsCallback;
 import br.ufs.android.linking.demo.rest.callbacks.ShotDetailsCallback;
+import br.ufs.android.linking.demo.rest.callbacks.ShotsCallback;
 import retrofit.RestAdapter;
 
 /**
@@ -22,6 +25,7 @@ public class RESTInteractor {
     }
 
     public void fetchPopularShots(int page) {
+        final Map<String, Object> args = new HashMap<>();
         api.popularShots(page, new ShotsCallback());
     }
 

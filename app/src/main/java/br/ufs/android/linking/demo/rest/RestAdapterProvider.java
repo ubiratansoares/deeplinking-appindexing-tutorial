@@ -15,8 +15,9 @@ public class RestAdapterProvider {
 
     private RestAdapterProvider() {
         adapter = new RestAdapter.Builder()
-                .setEndpoint("http://api.dribbble.com")
+                .setEndpoint("https://api.dribbble.com/v1")
                 .setLogLevel(defineLogLevel())
+                .setRequestInterceptor(new DribbbleTokenInterceptor())
                 .build();
     }
 

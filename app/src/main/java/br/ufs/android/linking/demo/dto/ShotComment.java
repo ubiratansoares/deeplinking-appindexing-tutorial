@@ -9,7 +9,7 @@ import com.google.gson.annotations.SerializedName;
 public class ShotComment {
 
     @SerializedName("body") String comment;
-    @SerializedName("player") DribbbleUser commenter;
+    @SerializedName("user") DribbbleUser commenter;
 
     public String getComment() {
         return comment;

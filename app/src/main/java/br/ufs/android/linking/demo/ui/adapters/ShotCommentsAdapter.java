@@ -98,7 +98,7 @@ public class ShotCommentsAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
         }
 
         Picasso.with(context)
-                .load(shot.getShotURL())
+                .load(shot.getImageURL())
                 .fit()
                 .centerCrop()
                 .error(R.drawable.img_placeholder)
@@ -108,7 +108,7 @@ public class ShotCommentsAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
 
     private void fillComment(CommentHolder holder, int position) {
         final ShotComment comment = comments.get(position - 1);
-        holder.commentLabel.setText(comment.getComment());
+        holder.commentLabel.setText(Html.fromHtml(comment.getComment()));
 
         final DribbbleUser commenter = comment.getCommenter();
 

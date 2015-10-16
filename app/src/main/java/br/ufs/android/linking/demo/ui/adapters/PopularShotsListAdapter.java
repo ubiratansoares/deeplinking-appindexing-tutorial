@@ -43,7 +43,7 @@ public class PopularShotsListAdapter extends RecyclerView.Adapter<PopularShotsLi
         shotHolder.shotNameLabel.setText(shot.getTitle());
         shotHolder.shotViewsLabel.setText(String.valueOf(shot.getViews()));
 
-        Picasso.with(context).load(shot.getShotURL())
+        Picasso.with(context).load(shot.getImageURL())
                 .fit()
                 .centerCrop()
                 .error(R.drawable.img_placeholder)
