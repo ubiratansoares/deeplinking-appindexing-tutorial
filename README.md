@@ -2,7 +2,7 @@
 
 Esse é o repositório para a demonstração sobre deeplinking e appindexing, que usa um cliente da API do  Dribbble como exemplo.
 
-Originalmente usando durante minha apresentação no DevFest Nordeste 2015. Slides disponíveis em [
+Originalmente usando durante minha apresentação no DevFest Nordeste 2015. Slides disponíveis em no [SpeakerDeck](https://speakerdeck.com/ubiratansoares/deeplinking-appindexing-e-alem)
 
 **LICENSE**
 
