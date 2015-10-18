@@ -25,6 +25,18 @@
         <activity
             android:name=".ui.activities.ShotDetailsActivity"
             android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:scheme="https"
+                    android:host="dribbble.com"
+                    android:pathPrefix="/shots"
+                    />
+
+            </intent-filter>
         </activity>
 
         <activity

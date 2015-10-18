@@ -12,7 +12,7 @@ public class DribbbleShot implements Serializable {
     @SerializedName("images") Images images;
     @SerializedName("views_count") int views;
     @SerializedName("user") DribbbleUser user;
-    @SerializedName("url") String webURL;
+    @SerializedName("html_url") String webURL;
     String title;
     String description;
     int id;
