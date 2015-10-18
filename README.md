@@ -4,6 +4,8 @@ Esse é o repositório para a demonstração sobre deeplinking e appindexing, qu
 
 Originalmente usando durante minha apresentação no DevFest Nordeste 2015. Slides disponíveis em no [SpeakerDeck](https://speakerdeck.com/ubiratansoares/deeplinking-appindexing-e-alem)
 
+Para obter um Access Token válido da API e rodar essa demonstração, faça o cadastro da sua aplicação no [console para Desenvolvedores](https://dribbble.com/account/applications/new) do Dribbble.
+
 **LICENSE**
 
 The MIT License (MIT)
