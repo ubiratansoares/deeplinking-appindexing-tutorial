@@ -8,8 +8,7 @@ import retrofit.RequestInterceptor;
 
 public class DribbbleTokenInterceptor implements RequestInterceptor {
 
-    public static final String ACCESS_TOKEN =
-            "bc1b249502dece98d6c157b3e0274e97b9f43a04d81b76c6ccbadfc7fff63362";
+    public static final String ACCESS_TOKEN = null;
 
     @Override public void intercept(RequestFacade request) {
         if(ACCESS_TOKEN == null)
